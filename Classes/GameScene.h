@@ -29,6 +29,11 @@ public:
     static cocos2d::CCScene* scene();
     
     CREATE_FUNC(GameScene);
+    
+    
+    virtual bool ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent);
+    virtual void ccTouchMoved(CCTouch* pTouch, CCEvent* pEvent);
+    virtual void ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent);
 };
 
 #endif /* defined(__GameJame__GameScene__) */

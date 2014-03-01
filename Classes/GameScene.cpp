@@ -22,3 +22,19 @@ bool GameScene::init() {
     
     return true;
 }
+
+
+bool GameScene::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
+{
+    
+    CCPoint touchPoint = this->convertTouchToNodeSpace(pTouch);
+    return true;
+}
+
+void GameScene::ccTouchMoved(CCTouch* pTouch, CCEvent* pEvent)
+{}
+
+void GameScene::ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent)
+{
+    
+}
