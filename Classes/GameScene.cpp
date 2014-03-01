@@ -26,10 +26,18 @@ bool GameScene::init() {
     setTouchMode(kCCTouchesOneByOne);
     setTouchEnabled(true);
     
+    
+    
     mainChara = CCSprite::create("Icon-114.png");
     mainChara->setPosition(ccp(WINDOW_SIZE.width/2,200));
     addChild(mainChara);
+    
+    pantsArray = CCArray::create();
+    pantsArray->retain();
+    
+    
     tickCount=0;
+    score=0;
     targetMovePointX=WINDOW_SIZE.width/2;
     //game start
     scheduleUpdate();
@@ -46,7 +54,7 @@ void GameScene::update(float dt) {
         mainChara->setPosition(ccp(targetMovePointX,mainChara->getPosition().y));
         return;
     }
-
+    
     float moveValue = MOVE_SPEED;
     if (mainChara->getPosition().x>targetMovePointX) {
         moveValue=moveValue*-1;
@@ -54,17 +62,43 @@ void GameScene::update(float dt) {
     
     mainChara->setPosition(ccpAdd(mainChara->getPosition(),ccp(moveValue,0)));
     
-//    if (tickCount%6==0) {
-//        this->updateTimer();
-//    }
-//    
-//    if (tickCount%400 ==0) {
-//        this->unschedule(schedule_selector(GameScene::updateTimer));
-//        
-//        GameScene::handleGameOver();
-//        
-//    }
     
+    
+    collisionDetection();
+    
+    
+    //    if (tickCount%6==0) {
+    //        this->updateTimer();
+    //    }
+    //
+    //    if (tickCount%400 ==0) {
+    //        this->unschedule(schedule_selector(GameScene::updateTimer));
+    //
+    //        GameScene::handleGameOver();
+    //
+    //    }
+    
+}
+
+
+bool GameScene::collisionDetection(){
+    
+    //TODO:当たり判定
+    CCObject *obj;
+    CCARRAY_FOREACH_REVERSE(pantsArray, obj){
+        CCSprite *pants = (CCSprite*)obj;
+        
+        if (mainChara->boundingBox().intersectsRect(pants->boundingBox())) {
+            //キャッチ！
+            pantsArray->removeLastObject(pants);
+            pants->removeFromParentAndCleanup(true);
+            
+            score++;
+        }
+    }
+    
+    
+    return true;
 }
 
 bool GameScene::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
@@ -79,10 +113,10 @@ bool GameScene::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
 
 void GameScene::ccTouchMoved(CCTouch* pTouch, CCEvent* pEvent)
 {
-
+    
     
     CCPoint currentPosition = this->convertTouchToNodeSpace(pTouch);
-
+    
     if (abs(targetMovePointX-currentPosition.x)>20){
         targetMovePointX=currentPosition.x;
     }

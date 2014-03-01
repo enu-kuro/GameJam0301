@@ -27,6 +27,12 @@ private:
     int tickCount;
     
     float targetMovePointX;
+    
+    bool collisionDetection();
+    
+    CCArray *pantsArray;
+    
+    int score;
 public:
 
     virtual bool init();
