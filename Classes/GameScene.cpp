@@ -35,6 +35,11 @@ bool GameScene::init() {
     isEnableMoving=false;
     
     
+    CCSprite* background = CCSprite::create("Gamebackground.png");
+    background->setPosition(ccp(WINDOW_SIZE.width / 2, WINDOW_SIZE.height / 2));
+    
+    addChild(background);
+    
     scoreLabel = CCLabelTTF::create("0", "arial", 100);
     scoreLabel->setColor(ccWHITE);
     scoreLabel->setPosition(ccp(WINDOW_SIZE.width/2+200, WINDOW_SIZE.height-100));
@@ -48,8 +53,8 @@ bool GameScene::init() {
     
     gameOverLabel->setVisible(false);
     
-    mainChara = CCSprite::create("Icon-114.png");
-    mainChara->setPosition(ccp(WINDOW_SIZE.width/2,200));
+    mainChara = CCSprite::create("charGet.png");
+    mainChara->setPosition(ccp(WINDOW_SIZE.width/2,300));
     addChild(mainChara);
     
     pantsArray = CCArray::create();
@@ -75,7 +80,7 @@ void GameScene::restartGame(){
     score=0;
     targetMovePointX=WINDOW_SIZE.width/2;
     scheduleUpdate();
-    
+    gameOverLabel->setVisible(false);
     restart->setVisible(false);
 }
 
@@ -123,9 +128,22 @@ void GameScene::update(float dt) {
 void GameScene::spawnPants(){
     
     
+    
     int spawnPositionX = (arc4random()%(int)WINDOW_SIZE.width-20)+40;
     //FallObject *pants = FallObject::createFallObject("Icon-57.png");
-    CCSprite *pants = CCSprite::create("Icon-57.png");
+    CCSprite *pants;
+    int hoge = arc4random()%3;
+    if (hoge==0) {
+    pants = CCSprite::create("pointObj01.png");
+    
+    }else if(hoge==1) {
+    pants = CCSprite::create("pointObj02.png");
+    }else if(hoge==2) {
+        pants = CCSprite::create("pointObj03.png");
+    }
+    
+    
+    //CCSprite *pants = CCSprite::create("pointObj03.png");
     pants->setPosition(ccp(spawnPositionX,WINDOW_SIZE.height+100));
     addChild(pants);
     
