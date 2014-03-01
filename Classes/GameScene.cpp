@@ -22,8 +22,11 @@ bool GameScene::init() {
         return false;
     }
     
+    setTouchMode(kCCTouchesOneByOne);
+    setTouchEnabled(true);
+    
     mainChara = CCSprite::create("Icon-114.png");
-    mainChara->setPosition(ccp(WINDOW_SIZE.width/2,WINDOW_SIZE.height/2));
+    mainChara->setPosition(ccp(WINDOW_SIZE.width/2,100));
     addChild(mainChara);
     
     return true;
@@ -34,6 +37,8 @@ bool GameScene::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
 {
     
     CCPoint touchPoint = this->convertTouchToNodeSpace(pTouch);
+    
+    charaMove(touchPoint);
     return true;
 }
 
@@ -44,3 +49,12 @@ void GameScene::ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent)
 {
     
 }
+
+
+void GameScene::charaMove(CCPoint point){
+
+    CCMoveTo *move = CCMoveTo::create(1, point);
+    mainChara->runAction(move);
+    
+}
+

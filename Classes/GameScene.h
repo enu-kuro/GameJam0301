@@ -37,6 +37,9 @@ public:
     
     
     CCSprite *mainChara;
+    
+    
+    void charaMove(CCPoint point);
 };
 
 #endif /* defined(__GameJame__GameScene__) */
