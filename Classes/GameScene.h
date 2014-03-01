@@ -13,7 +13,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "cocos-ext.h"
-
+#include "FallObject.h"
 USING_NS_CC;
 USING_NS_CC_EXT;
 
@@ -33,8 +33,13 @@ private:
     CCArray *pantsArray;
     
     int score;
+    
+    void spawnPants();
+    
+    void fallDownPants(CCSprite *pants);
 public:
 
+    ~GameScene();
     virtual bool init();
 
     static cocos2d::CCScene* scene();

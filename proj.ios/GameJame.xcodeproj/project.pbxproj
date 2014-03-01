@@ -233,6 +233,7 @@
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 		C2E41B6918C1C70A009E9CF7 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E41B6718C1C70A009E9CF7 /* GameScene.cpp */; };
 		C2E41B6C18C1CB5A009E9CF7 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E41B6A18C1CB5A009E9CF7 /* TitleScene.cpp */; };
+		C2E41B7018C1DFB6009E9CF7 /* FallObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E41B6E18C1DFB6009E9CF7 /* FallObject.cpp */; };
 		D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A0AD0160F154A004552AE /* Default-568h@2x.png */; };
 		D446FD6E16102124000ADA7B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D446FD6D16102124000ADA7B /* Default@2x.png */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
@@ -726,6 +727,8 @@
 		C2E41B6818C1C70A009E9CF7 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
 		C2E41B6A18C1CB5A009E9CF7 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleScene.cpp; path = ../Classes/TitleScene.cpp; sourceTree = "<group>"; };
 		C2E41B6B18C1CB5A009E9CF7 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScene.h; path = ../Classes/TitleScene.h; sourceTree = "<group>"; };
+		C2E41B6E18C1DFB6009E9CF7 /* FallObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FallObject.cpp; path = ../Classes/FallObject.cpp; sourceTree = "<group>"; };
+		C2E41B6F18C1DFB6009E9CF7 /* FallObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FallObject.h; path = ../Classes/FallObject.h; sourceTree = "<group>"; };
 		D41A0AD0160F154A004552AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../proj.ios/Default-568h@2x.png"; sourceTree = "<group>"; };
 		D446FD6D16102124000ADA7B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../proj.ios/Default@2x.png"; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1262,6 +1265,8 @@
 				C2E41B6B18C1CB5A009E9CF7 /* TitleScene.h */,
 				C2E41B6718C1C70A009E9CF7 /* GameScene.cpp */,
 				C2E41B6818C1C70A009E9CF7 /* GameScene.h */,
+				C2E41B6E18C1DFB6009E9CF7 /* FallObject.cpp */,
+				C2E41B6F18C1DFB6009E9CF7 /* FallObject.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -1986,6 +1991,7 @@
 				1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */,
 				375BD4C51868411B0024609E /* TriggerMng.cpp in Sources */,
 				1A9CE8781765A12C000E3062 /* AssetsManager.cpp in Sources */,
+				C2E41B7018C1DFB6009E9CF7 /* FallObject.cpp in Sources */,
 				379BB99A17F03F3700829B88 /* CCArmatureAnimation.cpp in Sources */,
 				379BB99B17F03F3700829B88 /* CCProcessBase.cpp in Sources */,
 				379BB99C17F03F3700829B88 /* CCTween.cpp in Sources */,
@@ -2087,7 +2093,7 @@
 				);
 				OTHER_CFLAGS = "-O2";
 				PRODUCT_NAME = GameJame;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CABCF879-475D-456E-B65D-259ECC5DC592";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

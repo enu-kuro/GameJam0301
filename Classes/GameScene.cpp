@@ -18,6 +18,13 @@ CCScene* GameScene::scene() {
     return scene;
 }
 
+GameScene::~GameScene()
+{
+    //CC_SAFE_RELEASE(resultLayer);
+ 
+    CC_SAFE_DELETE_ARRAY(pantsArray);
+}
+
 bool GameScene::init() {
     if (!CCLayer::init()) {
         return false;
@@ -67,6 +74,11 @@ void GameScene::update(float dt) {
     collisionDetection();
     
     
+    if (tickCount%60==0){
+        
+        spawnPants();
+    }
+    
     //    if (tickCount%6==0) {
     //        this->updateTimer();
     //    }
@@ -80,6 +92,22 @@ void GameScene::update(float dt) {
     
 }
 
+void GameScene::spawnPants(){
+
+    CCSprite *pants = CCSprite::create("Icon-57.png");
+    pants->setPosition(ccp(WINDOW_SIZE.width/2,WINDOW_SIZE.height+100));
+    addChild(pants);
+    
+    pantsArray->addObject(pants);
+
+}
+
+void GameScene::fallDownPants(CCSprite *pants){
+
+
+    CCMoveTo *move = CCMoveTo::create(5,ccp(pants->getPosition().x, -100));
+    
+}
 
 bool GameScene::collisionDetection(){
     
@@ -96,7 +124,6 @@ bool GameScene::collisionDetection(){
             score++;
         }
     }
-    
     
     return true;
 }
