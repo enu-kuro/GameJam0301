@@ -1,16 +1,5 @@
 //
 //  TitleScene.cpp
-//  GameJame
-//
-//  Created by Kurose Nobuhito on 2014/03/01.
-//
-//
-
-#include "TitleScene.h"
-
-
-//
-//  TitleScene.cpp
 //
 //
 //  Created by Kurose Nobuhito on 2014/01/12.
@@ -48,7 +37,6 @@ bool TitleScene::init() {
 	setTouchEnabled(true);
     setTouchMode(kCCTouchesAllAtOnce);
 
-	
     CCLOG("titlescene");
     
     return true;

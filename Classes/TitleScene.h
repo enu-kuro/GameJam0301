@@ -27,7 +27,7 @@ public:
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(TitleScene);
 	
-	    //  マルチタッチ時の移動コールバック
+	    //  マルチタッチ時のタッチ開始コールバック
     virtual void ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
 
 private:
