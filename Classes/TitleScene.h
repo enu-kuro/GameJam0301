@@ -26,5 +26,11 @@ public:
     
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(TitleScene);
+	
+	    //  マルチタッチ時の移動コールバック
+    virtual void ccTouchesBegan(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
+
+private:
+	void	onStartBtn();
 };
 #endif /* defined(__GameJame__TitleScene__) */

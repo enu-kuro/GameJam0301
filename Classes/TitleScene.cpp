@@ -39,19 +39,26 @@ bool TitleScene::init() {
 
     this->addChild(splash, 1);
     
-    CCFiniteTimeAction *seq1 = CCSequence::create(CCDelayTime::create(0.6),
-                                                  CCCallFunc::create(this,
-                                                                     callfunc_selector(TitleScene::finishTitleScene)), NULL);
+	{
+		CCLabelTTF*	pLabel	= CCLabelTTF::create( "画面にタッチしてね！", "arial", 24 );
+		pLabel->setPosition( ccp(screenSize.width / 2, screenSize.height * 0.3f) );
+		addChild( pLabel );
+	}
+	
+	setTouchEnabled(true);
+    setTouchMode(kCCTouchesAllAtOnce);
+
+	
     CCLOG("titlescene");
-    this->runAction(seq1);
     
     return true;
 }
 
-void TitleScene::finishTitleScene(){
-    
+void TitleScene::ccTouchesBegan( CCSet *pTouches, CCEvent *pEvent )
+{
     CCScene *scene = GameScene::scene();
     
     CCTransitionCrossFade *crossFade = CCTransitionCrossFade::create(0.2f, scene);
     CCDirector::sharedDirector()->replaceScene(crossFade);
 }
+
