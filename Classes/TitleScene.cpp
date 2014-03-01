@@ -31,11 +31,12 @@ bool TitleScene::init() {
     if (!CCLayer::init()) {
         return false;
     }
-    
-    CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
-    
-    CCSprite* splash = CCSprite::create("Default-568h@2x.png");
+	
+	CCSize screenSize = CCEGLView::sharedOpenGLView()->getDesignResolutionSize();
+
+    CCSprite* splash = CCSprite::create("titleSceneimg.png");
     splash->setPosition(ccp(screenSize.width / 2, screenSize.height / 2));
+
     this->addChild(splash, 1);
     
     CCFiniteTimeAction *seq1 = CCSequence::create(CCDelayTime::create(0.6),
