@@ -41,7 +41,7 @@ bool TitleScene::init() {
     CCFiniteTimeAction *seq1 = CCSequence::create(CCDelayTime::create(0.6),
                                                   CCCallFunc::create(this,
                                                                      callfunc_selector(TitleScene::finishTitleScene)), NULL);
-    
+    CCLOG("titlescene");
     this->runAction(seq1);
     
     return true;

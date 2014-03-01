@@ -34,6 +34,9 @@ public:
     virtual bool ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent);
     virtual void ccTouchMoved(CCTouch* pTouch, CCEvent* pEvent);
     virtual void ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent);
+    
+    
+    CCSprite *mainChara;
 };
 
 #endif /* defined(__GameJame__GameScene__) */
