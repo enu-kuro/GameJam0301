@@ -21,7 +21,12 @@ class GameScene : public cocos2d::CCLayer
 {
 private:
     
-
+    void update(float dt);
+    CCSprite *mainChara;
+    //void charaMove(CCPoint point);
+    int tickCount;
+    
+    float targetMovePointX;
 public:
 
     virtual bool init();
@@ -36,10 +41,7 @@ public:
     virtual void ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent);
     
     
-    CCSprite *mainChara;
-    
-    
-    void charaMove(CCPoint point);
+ 
 };
 
 #endif /* defined(__GameJame__GameScene__) */
