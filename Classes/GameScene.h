@@ -44,6 +44,8 @@ private:
     void restartGame();
 
     CCLabelTTF* gameOverLabel;
+    
+    bool isEnableMoving;
 public:
 
     ~GameScene();

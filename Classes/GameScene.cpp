@@ -32,7 +32,7 @@ bool GameScene::init() {
     
     setTouchMode(kCCTouchesOneByOne);
     setTouchEnabled(true);
-    
+    isEnableMoving=false;
     
     
     scoreLabel = CCLabelTTF::create("0", "arial", 100);
@@ -56,9 +56,9 @@ bool GameScene::init() {
     pantsArray->retain();
     
     restart =CCMenuItemLabel::create(CCLabelTTF::create("touch to start!", "Thonburi", 100), this,menu_selector(GameScene::restartGame));
-
+    
     CCMenu* pMenu = CCMenu::create(restart, NULL);
-
+    
     pMenu->setPosition(ccp(WINDOW_SIZE.width/2, WINDOW_SIZE.height/2));
     
     this->addChild(pMenu);
@@ -69,36 +69,39 @@ bool GameScene::init() {
 }
 
 void GameScene::restartGame(){
-
+        scoreLabel->setString("0");
+    isEnableMoving=false;
     tickCount=0;
     score=0;
-        targetMovePointX=WINDOW_SIZE.width/2;
-        scheduleUpdate();
-
+    targetMovePointX=WINDOW_SIZE.width/2;
+    scheduleUpdate();
+    
     restart->setVisible(false);
 }
 
 void GameScene::update(float dt) {
     
     tickCount++;
-    
-    if (abs(mainChara->getPosition().x-targetMovePointX)<10) {
-        mainChara->setPosition(ccp(targetMovePointX,mainChara->getPosition().y));
+    if (isEnableMoving) {
         
-    }else{
         
-        float moveValue = MOVE_SPEED;
-        if (mainChara->getPosition().x>targetMovePointX) {
-            moveValue=moveValue*-1;
+        if (abs(mainChara->getPosition().x-targetMovePointX)<10) {
+            mainChara->setPosition(ccp(targetMovePointX,mainChara->getPosition().y));
+            
+        }else{
+            
+            float moveValue = MOVE_SPEED;
+            if (mainChara->getPosition().x>targetMovePointX) {
+                moveValue=moveValue*-1;
+            }
+            
+            mainChara->setPosition(ccpAdd(mainChara->getPosition(),ccp(moveValue,0)));
         }
-        
-        mainChara->setPosition(ccpAdd(mainChara->getPosition(),ccp(moveValue,0)));
     }
-    
     
     collisionDetection();
     //    int hoge=tickCount%60;
-
+    
     if (tickCount%60==0){
         
         spawnPants();
@@ -120,7 +123,7 @@ void GameScene::update(float dt) {
 void GameScene::spawnPants(){
     
     
-    int spawnPositionX = (arc4random()%(int)WINDOW_SIZE.width-80)+40;
+    int spawnPositionX = (arc4random()%(int)WINDOW_SIZE.width-20)+40;
     //FallObject *pants = FallObject::createFallObject("Icon-57.png");
     CCSprite *pants = CCSprite::create("Icon-57.png");
     pants->setPosition(ccp(spawnPositionX,WINDOW_SIZE.height+100));
@@ -174,12 +177,13 @@ bool GameScene::collisionDetection(){
 void GameScene::gameOver(){
     tickCount=0;
     CCLOG("gameover");
-
+    
     gameOverLabel->setVisible(true);
     restart->setVisible(true);
     unscheduleUpdate();
-
     
+    
+
     
     CCObject *obj;
     CCARRAY_FOREACH_REVERSE(pantsArray, obj){
@@ -189,11 +193,12 @@ void GameScene::gameOver(){
         
     }
     
-
+    
 }
 
 bool GameScene::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
 {
+    isEnableMoving=true;
     targetMovePointX = this->convertTouchToNodeSpace(pTouch).x;
     
     //charaMove(touchPoint);
@@ -214,7 +219,7 @@ void GameScene::ccTouchMoved(CCTouch* pTouch, CCEvent* pEvent)
 
 void GameScene::ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent)
 {
-    
+    isEnableMoving=false;
 }
 
 
