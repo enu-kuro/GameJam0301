@@ -37,6 +37,13 @@ private:
     void spawnPants();
     
     void fallDownPants(CCSprite *pants);
+    void gameOver();
+    CCLabelTTF* scoreLabel;
+    
+    CCMenuItemLabel *restart;
+    void restartGame();
+
+    CCLabelTTF* gameOverLabel;
 public:
 
     ~GameScene();
