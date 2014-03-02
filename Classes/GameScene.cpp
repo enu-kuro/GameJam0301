@@ -7,7 +7,7 @@
 //
 
 #include "GameScene.h"
-
+#include "SimpleAudioEngine.h"
 #define WINDOW_SIZE CCDirector::sharedDirector()->getWinSize()
 
 #define MOVE_SPEED 15
@@ -35,6 +35,11 @@ bool GameScene::init() {
     isEnableMoving=false;
     
     
+    CCSprite* background = CCSprite::create("Gamebackground.png");
+    background->setPosition(ccp(WINDOW_SIZE.width / 2, WINDOW_SIZE.height / 2));
+    
+    addChild(background);
+    
     scoreLabel = CCLabelTTF::create("0", "arial", 100);
     scoreLabel->setColor(ccWHITE);
     scoreLabel->setPosition(ccp(WINDOW_SIZE.width/2+200, WINDOW_SIZE.height-100));
@@ -48,14 +53,19 @@ bool GameScene::init() {
     
     gameOverLabel->setVisible(false);
     
-    mainChara = CCSprite::create("Icon-114.png");
-    mainChara->setPosition(ccp(WINDOW_SIZE.width/2,200));
+    mainChara = CCSprite::create("charlclle.png");
+    mainChara->setPosition(ccp(WINDOW_SIZE.width/2,300));
     addChild(mainChara);
     
     pantsArray = CCArray::create();
     pantsArray->retain();
     
-    restart =CCMenuItemLabel::create(CCLabelTTF::create("touch to start!", "Thonburi", 100), this,menu_selector(GameScene::restartGame));
+
+    //スペルミス
+    CCSprite* pSelectedSprite = CCSprite::create("StartBrn.png");
+    restart= CCMenuItemSprite::create(pSelectedSprite, pSelectedSprite, this, menu_selector(GameScene::restartGame));
+    
+    //restart =CCMenuItemLabel::create(CCLabelTTF::create("touch to start!", "Thonburi", 100), this,menu_selector(GameScene::restartGame));
     
     CCMenu* pMenu = CCMenu::create(restart, NULL);
     
@@ -75,8 +85,12 @@ void GameScene::restartGame(){
     score=0;
     targetMovePointX=WINDOW_SIZE.width/2;
     scheduleUpdate();
-    
+    gameOverLabel->setVisible(false);
     restart->setVisible(false);
+    
+    mainChara->setTexture(CCTextureCache::sharedTextureCache()->addImage("charGet.png"));
+    
+                  CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("hentai.wav");
 }
 
 void GameScene::update(float dt) {
@@ -102,7 +116,7 @@ void GameScene::update(float dt) {
     collisionDetection();
     //    int hoge=tickCount%60;
     
-    if (tickCount%60==0){
+    if (tickCount%40==0){
         
         spawnPants();
     }
@@ -123,9 +137,22 @@ void GameScene::update(float dt) {
 void GameScene::spawnPants(){
     
     
+    
     int spawnPositionX = (arc4random()%(int)WINDOW_SIZE.width-20)+40;
     //FallObject *pants = FallObject::createFallObject("Icon-57.png");
-    CCSprite *pants = CCSprite::create("Icon-57.png");
+    CCSprite *pants;
+    int hoge = arc4random()%3;
+    if (hoge==0) {
+    pants = CCSprite::create("pointObj01.png");
+    
+    }else if(hoge==1) {
+    pants = CCSprite::create("pointObj02.png");
+    }else if(hoge==2) {
+        pants = CCSprite::create("pointObj03.png");
+    }
+    
+    
+    //CCSprite *pants = CCSprite::create("pointObj03.png");
     pants->setPosition(ccp(spawnPositionX,WINDOW_SIZE.height+100));
     addChild(pants);
     
@@ -138,7 +165,7 @@ void GameScene::spawnPants(){
 void GameScene::fallDownPants(CCSprite *pants){
     
     
-    CCMoveTo *move = CCMoveTo::create(3,ccp(pants->getPosition().x, -100));
+    CCMoveTo *move = CCMoveTo::create(3.5,ccp(pants->getPosition().x, -100));
     
     CCCallFunc *func = CCCallFunc::create(this, callfunc_selector(GameScene::gameOver));
     CCSequence *seq = CCSequence::create(move,func,NULL);
@@ -166,6 +193,7 @@ bool GameScene::collisionDetection(){
             sprintf(scoreStr, "%d", score);
             scoreLabel->setString(scoreStr);
             
+              CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("hentai.wav");
             return true;
         }
     }
@@ -182,6 +210,8 @@ void GameScene::gameOver(){
     restart->setVisible(true);
     unscheduleUpdate();
     
+    
+    mainChara->setTexture(CCTextureCache::sharedTextureCache()->addImage("charlclle.png"));
     
 
     

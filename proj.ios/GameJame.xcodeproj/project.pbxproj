@@ -231,6 +231,28 @@
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		C297923018C1F1B8004CF888 /* charGet.png in Resources */ = {isa = PBXBuildFile; fileRef = C297922E18C1F1B8004CF888 /* charGet.png */; };
+		C297923118C1F1B8004CF888 /* charlclle.png in Resources */ = {isa = PBXBuildFile; fileRef = C297922F18C1F1B8004CF888 /* charlclle.png */; };
+		C297923A18C1F1C3004CF888 /* iwama_02-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297923218C1F1C3004CF888 /* iwama_02-01.wav */; };
+		C297923B18C1F1C3004CF888 /* pointObj01.png in Resources */ = {isa = PBXBuildFile; fileRef = C297923318C1F1C3004CF888 /* pointObj01.png */; };
+		C297923C18C1F1C3004CF888 /* pointObj02.png in Resources */ = {isa = PBXBuildFile; fileRef = C297923418C1F1C3004CF888 /* pointObj02.png */; };
+		C297923D18C1F1C3004CF888 /* pointObj03.png in Resources */ = {isa = PBXBuildFile; fileRef = C297923518C1F1C3004CF888 /* pointObj03.png */; };
+		C297923F18C1F1C3004CF888 /* titleSceneimg.png in Resources */ = {isa = PBXBuildFile; fileRef = C297923718C1F1C3004CF888 /* titleSceneimg.png */; };
+		C297924018C1F1C3004CF888 /* おとこ.png in Resources */ = {isa = PBXBuildFile; fileRef = C297923818C1F1C3004CF888 /* おとこ.png */; };
+		C297924118C1F1C3004CF888 /* パンツ.png in Resources */ = {isa = PBXBuildFile; fileRef = C297923918C1F1C3004CF888 /* パンツ.png */; };
+		C297924318C1F2F3004CF888 /* Gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C297924218C1F2F3004CF888 /* Gamebackground.png */; };
+		C297924F18C1F59C004CF888 /* ありがと2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924418C1F59C004CF888 /* ありがと2.wav */; };
+		C297925018C1F59C004CF888 /* えへへ.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924518C1F59C004CF888 /* えへへ.wav */; };
+		C297925118C1F59C004CF888 /* えへへ2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924618C1F59C004CF888 /* えへへ2.wav */; };
+		C297925218C1F59C004CF888 /* おとこ.png in Resources */ = {isa = PBXBuildFile; fileRef = C297924718C1F59C004CF888 /* おとこ.png */; };
+		C297925318C1F59C004CF888 /* おにいちゃんしゅごい.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924818C1F59C004CF888 /* おにいちゃんしゅごい.wav */; };
+		C297925418C1F59C004CF888 /* パンツ.png in Resources */ = {isa = PBXBuildFile; fileRef = C297924918C1F59C004CF888 /* パンツ.png */; };
+		C297925518C1F59C004CF888 /* パンツ拾って下さい 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924A18C1F59C004CF888 /* パンツ拾って下さい 01.wav */; };
+		C297925618C1F59C004CF888 /* パンツ拾って下さい02.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924B18C1F59C004CF888 /* パンツ拾って下さい02.wav */; };
+		C297925818C1F59C004CF888 /* 使用する画像一覧.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C297924D18C1F59C004CF888 /* 使用する画像一覧.rtf */; };
+		C297925918C1F59C004CF888 /* 恥ずかしいな.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297924E18C1F59C004CF888 /* 恥ずかしいな.wav */; };
+		C297925B18C1F64D004CF888 /* hentai.wav in Resources */ = {isa = PBXBuildFile; fileRef = C297925A18C1F64D004CF888 /* hentai.wav */; };
+		C297925D18C1F9CA004CF888 /* StartBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C297925C18C1F9CA004CF888 /* StartBtn.png */; };
 		C2E41B6918C1C70A009E9CF7 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E41B6718C1C70A009E9CF7 /* GameScene.cpp */; };
 		C2E41B6C18C1CB5A009E9CF7 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E41B6A18C1CB5A009E9CF7 /* TitleScene.cpp */; };
 		C2E41B7018C1DFB6009E9CF7 /* FallObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E41B6E18C1DFB6009E9CF7 /* FallObject.cpp */; };
@@ -239,7 +261,6 @@
 		D14F2C4A18C1DDF9007F9147 /* Gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D14F2C4518C1DDF9007F9147 /* Gamebackground.png */; };
 		D14F2C4B18C1DDF9007F9147 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = D14F2C4618C1DDF9007F9147 /* HelloWorld.png */; };
 		D14F2C4C18C1DDF9007F9147 /* pointObj01.png in Resources */ = {isa = PBXBuildFile; fileRef = D14F2C4718C1DDF9007F9147 /* pointObj01.png */; };
-		D14F2C4D18C1DDF9007F9147 /* StartBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D14F2C4818C1DDF9007F9147 /* StartBtn.png */; };
 		D14F2C4E18C1DDF9007F9147 /* titleSceneimg.png in Resources */ = {isa = PBXBuildFile; fileRef = D14F2C4918C1DDF9007F9147 /* titleSceneimg.png */; };
 		D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A0AD0160F154A004552AE /* Default-568h@2x.png */; };
 		D446FD6E16102124000ADA7B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D446FD6D16102124000ADA7B /* Default@2x.png */; };
@@ -730,6 +751,28 @@
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C297922E18C1F1B8004CF888 /* charGet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charGet.png; sourceTree = "<group>"; };
+		C297922F18C1F1B8004CF888 /* charlclle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charlclle.png; sourceTree = "<group>"; };
+		C297923218C1F1C3004CF888 /* iwama_02-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "iwama_02-01.wav"; sourceTree = "<group>"; };
+		C297923318C1F1C3004CF888 /* pointObj01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointObj01.png; sourceTree = "<group>"; };
+		C297923418C1F1C3004CF888 /* pointObj02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointObj02.png; sourceTree = "<group>"; };
+		C297923518C1F1C3004CF888 /* pointObj03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointObj03.png; sourceTree = "<group>"; };
+		C297923718C1F1C3004CF888 /* titleSceneimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleSceneimg.png; sourceTree = "<group>"; };
+		C297923818C1F1C3004CF888 /* おとこ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "おとこ.png"; sourceTree = "<group>"; };
+		C297923918C1F1C3004CF888 /* パンツ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "パンツ.png"; sourceTree = "<group>"; };
+		C297924218C1F2F3004CF888 /* Gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gamebackground.png; sourceTree = "<group>"; };
+		C297924418C1F59C004CF888 /* ありがと2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ありがと2.wav"; sourceTree = "<group>"; };
+		C297924518C1F59C004CF888 /* えへへ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "えへへ.wav"; sourceTree = "<group>"; };
+		C297924618C1F59C004CF888 /* えへへ2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "えへへ2.wav"; sourceTree = "<group>"; };
+		C297924718C1F59C004CF888 /* おとこ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "おとこ.png"; sourceTree = "<group>"; };
+		C297924818C1F59C004CF888 /* おにいちゃんしゅごい.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "おにいちゃんしゅごい.wav"; sourceTree = "<group>"; };
+		C297924918C1F59C004CF888 /* パンツ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "パンツ.png"; sourceTree = "<group>"; };
+		C297924A18C1F59C004CF888 /* パンツ拾って下さい 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "パンツ拾って下さい 01.wav"; sourceTree = "<group>"; };
+		C297924B18C1F59C004CF888 /* パンツ拾って下さい02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "パンツ拾って下さい02.wav"; sourceTree = "<group>"; };
+		C297924D18C1F59C004CF888 /* 使用する画像一覧.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "使用する画像一覧.rtf"; sourceTree = "<group>"; };
+		C297924E18C1F59C004CF888 /* 恥ずかしいな.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "恥ずかしいな.wav"; sourceTree = "<group>"; };
+		C297925A18C1F64D004CF888 /* hentai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hentai.wav; sourceTree = "<group>"; };
+		C297925C18C1F9CA004CF888 /* StartBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartBtn.png; sourceTree = "<group>"; };
 		C2E41B6718C1C70A009E9CF7 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../Classes/GameScene.cpp; sourceTree = "<group>"; };
 		C2E41B6818C1C70A009E9CF7 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
 		C2E41B6A18C1CB5A009E9CF7 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleScene.cpp; path = ../Classes/TitleScene.cpp; sourceTree = "<group>"; };
@@ -741,7 +784,6 @@
 		D14F2C4518C1DDF9007F9147 /* Gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gamebackground.png; sourceTree = "<group>"; };
 		D14F2C4618C1DDF9007F9147 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		D14F2C4718C1DDF9007F9147 /* pointObj01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointObj01.png; sourceTree = "<group>"; };
-		D14F2C4818C1DDF9007F9147 /* StartBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartBtn.png; sourceTree = "<group>"; };
 		D14F2C4918C1DDF9007F9147 /* titleSceneimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleSceneimg.png; sourceTree = "<group>"; };
 		D41A0AD0160F154A004552AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../proj.ios/Default-568h@2x.png"; sourceTree = "<group>"; };
 		D446FD6D16102124000ADA7B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../proj.ios/Default@2x.png"; sourceTree = "<group>"; };
@@ -1737,10 +1779,22 @@
 			children = (
 				D14F2C4118C1DDEE007F9147 /* charGet.png */,
 				D14F2C4218C1DDEE007F9147 /* Charldle.png */,
+				C297924418C1F59C004CF888 /* ありがと2.wav */,
+				C297924518C1F59C004CF888 /* えへへ.wav */,
+				C297924618C1F59C004CF888 /* えへへ2.wav */,
+				C297924718C1F59C004CF888 /* おとこ.png */,
+				C297924818C1F59C004CF888 /* おにいちゃんしゅごい.wav */,
+				C297924918C1F59C004CF888 /* パンツ.png */,
+				C297924A18C1F59C004CF888 /* パンツ拾って下さい 01.wav */,
+				C297924B18C1F59C004CF888 /* パンツ拾って下さい02.wav */,
+				C297924D18C1F59C004CF888 /* 使用する画像一覧.rtf */,
+				C297925A18C1F64D004CF888 /* hentai.wav */,
+				C297924E18C1F59C004CF888 /* 恥ずかしいな.wav */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 				D41A0AD0160F154A004552AE /* Default-568h@2x.png */,
+				C297924218C1F2F3004CF888 /* Gamebackground.png */,
 				7855E0DF153FEF240059DD9A /* Default.png */,
 				D446FD6D16102124000ADA7B /* Default@2x.png */,
 				D4EF949B15BD2D8E00D803EB /* Icon-114.png */,
@@ -1750,8 +1804,17 @@
 				D14F2C4518C1DDF9007F9147 /* Gamebackground.png */,
 				D14F2C4618C1DDF9007F9147 /* HelloWorld.png */,
 				D14F2C4718C1DDF9007F9147 /* pointObj01.png */,
-				D14F2C4818C1DDF9007F9147 /* StartBtn.png */,
 				D14F2C4918C1DDF9007F9147 /* titleSceneimg.png */,
+				C297925C18C1F9CA004CF888 /* StartBtn.png */,
+				C297922E18C1F1B8004CF888 /* charGet.png */,
+				C297922F18C1F1B8004CF888 /* charlclle.png */,
+				C297923218C1F1C3004CF888 /* iwama_02-01.wav */,
+				C297923318C1F1C3004CF888 /* pointObj01.png */,
+				C297923418C1F1C3004CF888 /* pointObj02.png */,
+				C297923518C1F1C3004CF888 /* pointObj03.png */,
+				C297923718C1F1C3004CF888 /* titleSceneimg.png */,
+				C297923818C1F1C3004CF888 /* おとこ.png */,
+				C297923918C1F1C3004CF888 /* パンツ.png */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -1784,7 +1847,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GameJame" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1829,18 +1892,39 @@
 				D14F2C4B18C1DDF9007F9147 /* HelloWorld.png in Resources */,
 				D14F2C4E18C1DDF9007F9147 /* titleSceneimg.png in Resources */,
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
+				C297923D18C1F1C3004CF888 /* pointObj03.png in Resources */,
+				C297925818C1F59C004CF888 /* 使用する画像一覧.rtf in Resources */,
+				C297924118C1F1C3004CF888 /* パンツ.png in Resources */,
+				C297925118C1F59C004CF888 /* えへへ2.wav in Resources */,
+				C297925018C1F59C004CF888 /* えへへ.wav in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
+				C297925618C1F59C004CF888 /* パンツ拾って下さい02.wav in Resources */,
+				C297923B18C1F1C3004CF888 /* pointObj01.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
-				D14F2C4D18C1DDF9007F9147 /* StartBtn.png in Resources */,
 				D14F2C4318C1DDEE007F9147 /* charGet.png in Resources */,
+				C297924318C1F2F3004CF888 /* Gamebackground.png in Resources */,
+				C297925318C1F59C004CF888 /* おにいちゃんしゅごい.wav in Resources */,
+				C297923018C1F1B8004CF888 /* charGet.png in Resources */,
+				C297925B18C1F64D004CF888 /* hentai.wav in Resources */,
+				C297924018C1F1C3004CF888 /* おとこ.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				D14F2C4C18C1DDF9007F9147 /* pointObj01.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
+				C297925518C1F59C004CF888 /* パンツ拾って下さい 01.wav in Resources */,
+				C297923C18C1F1C3004CF888 /* pointObj02.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
+				C297923F18C1F1C3004CF888 /* titleSceneimg.png in Resources */,
+				C297925918C1F59C004CF888 /* 恥ずかしいな.wav in Resources */,
+				C297925218C1F59C004CF888 /* おとこ.png in Resources */,
+				C297924F18C1F59C004CF888 /* ありがと2.wav in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 				D14F2C4A18C1DDF9007F9147 /* Gamebackground.png in Resources */,
+				C297925D18C1F9CA004CF888 /* StartBtn.png in Resources */,
+				C297923118C1F1B8004CF888 /* charlclle.png in Resources */,
+				C297925418C1F59C004CF888 /* パンツ.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
+				C297923A18C1F1C3004CF888 /* iwama_02-01.wav in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				D14F2C4418C1DDEE007F9147 /* Charldle.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -2180,11 +2264,11 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7 i386";
 			};
@@ -2193,7 +2277,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

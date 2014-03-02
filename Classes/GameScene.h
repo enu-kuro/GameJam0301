@@ -39,8 +39,8 @@ private:
     void fallDownPants(CCSprite *pants);
     void gameOver();
     CCLabelTTF* scoreLabel;
-    
-    CCMenuItemLabel *restart;
+        CCMenuItemSprite *restart;
+    //CCMenuItemLabel *restart;
     void restartGame();
 
     CCLabelTTF* gameOverLabel;
